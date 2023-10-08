@@ -2,36 +2,36 @@
 	export let date: Date;
 	export let name: string;
 
-	const current_date = Date.now();
+	const currentDate = Date.now();
 
-	function update_date(date: Date) {
+	function updateDate(date: Date) {
 		date.setSeconds(date.getSeconds() - 1);
 
 		return date;
 	}
 
 	setInterval(() => {
-		date = update_date(date);
+		date = updateDate(date);
 	}, 1000);
 
-	function get_remaining_days(date: Date, current_date: number) {
-		const difference_in_milliseconds = date.getTime() - current_date;
-		return Math.floor(difference_in_milliseconds / (1000 * 60 * 60 * 24));
+	function getRemainingDays(date: Date, currentDate: number) {
+		const differenceInMillisecons = date.getTime() - currentDate;
+		return Math.floor(differenceInMillisecons / (1000 * 60 * 60 * 24));
 	}
 
-	function get_remaining_hours(date: Date, current_date: number) {
-		const difference_in_milliseconds = date.getTime() - current_date;
-		return Math.floor((difference_in_milliseconds / (1000 * 60 * 60)) % 24);
+	function getRemainingHours(date: Date, currentDate: number) {
+		const differenceInMilliseconds = date.getTime() - currentDate;
+		return Math.floor((differenceInMilliseconds / (1000 * 60 * 60)) % 24);
 	}
 
-	function get_remaining_minutes(date: Date, current_date: number) {
-		const difference_in_milliseconds = date.getTime() - current_date;
-		return Math.floor((difference_in_milliseconds / (1000 * 60)) % 60);
+	function getRemainingMinutes(date: Date, currentDate: number) {
+		const differenceInMilliseconds = date.getTime() - currentDate;
+		return Math.floor((differenceInMilliseconds / (1000 * 60)) % 60);
 	}
 
-	function get_remaining_seconds(date: Date, current_date: number) {
-		const difference_in_milliseconds = date.getTime() - current_date;
-		return Math.floor((difference_in_milliseconds / 1000) % 60);
+	function getRemainingSeconds(date: Date, currentDate: number) {
+		const differenceInMilliseconds = date.getTime() - currentDate;
+		return Math.floor((differenceInMilliseconds / 1000) % 60);
 	}
 </script>
 
@@ -39,10 +39,10 @@
 	<p>{name}'ye</p>
 
 	<div class="container">
-		<p>{get_remaining_days(date, current_date)} <br />gun</p>
-		<p>{get_remaining_hours(date, current_date)} <br />saat</p>
-		<p>{get_remaining_minutes(date, current_date)} <br />dakika</p>
-		<p>{get_remaining_seconds(date, current_date)} <br />saniye</p>
+		<p>{getRemainingDays(date, currentDate)} <br />gun</p>
+		<p>{getRemainingHours(date, currentDate)} <br />saat</p>
+		<p>{getRemainingMinutes(date, currentDate)} <br />dakika</p>
+		<p>{getRemainingSeconds(date, currentDate)} <br />saniye</p>
 	</div>
 
 	<p>kaldi</p>
