@@ -1,3 +1,3 @@
 <main>
-  <h1>Hello, World!</h1>
+	<h1>YKS Master</h1>
 </main>
