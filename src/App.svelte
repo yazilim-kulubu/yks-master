@@ -1,3 +1,7 @@
+<script lang="ts">
+	import Countdown from "./components/Countdown.svelte";
+</script>
+
 <main>
-	<h1>YKS Master</h1>
+	<Countdown date={new Date("2024-06-27")} name="birthday"/>
 </main>
