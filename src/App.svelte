@@ -1,3 +1,7 @@
+<script lang="ts">
+	import SoruDeneme from "./components/SoruDeneme.svelte";
+</script>
+
 <main>
-	<h1>YKS Master</h1>
+	<SoruDeneme />
 </main>
